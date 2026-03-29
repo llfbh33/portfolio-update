@@ -1,6 +1,6 @@
 
 
-export default function Section({ title, index }) {
+export default function Section({ title, children, index }) {
   const isEven = index % 2 === 0;
 
   return (
@@ -25,12 +25,14 @@ export default function Section({ title, index }) {
         {title}
       </h2>
 
-      <div style={{ maxWidth: "900px" }}>
-        {/* content will go here later */}
+      <div>{children}</div>
+
+      {/* <div style={{ maxWidth: "900px" }}>
+
         <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
           Content for {title}
         </p>
-      </div>
+      </div> */}
     </section>
   );
 }

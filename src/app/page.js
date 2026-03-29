@@ -3,6 +3,9 @@
 import Section from "./components/Section";
 import Sidebar from "./components/SideBar";
 import { useState } from "react";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import About from "./components/About";
 
 export default function Home() {
   let [sideBarOpen, setSideBarOpen] = useState(true);
@@ -32,7 +35,11 @@ export default function Home() {
             width: "100%",
           }}>
           {sections.map((section, index) => (
-            <Section key={section} title={section} index={index}/>
+            <Section key={section} title={section} index={index}>
+              {section === "Experience" && <Experience />}
+              {section === "Skills" && <Skills />}
+              {section === "About" && <About />}
+            </Section>
           ))}
         </div>
       </div>

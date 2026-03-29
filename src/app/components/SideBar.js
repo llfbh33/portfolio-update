@@ -95,7 +95,6 @@ export default function Sidebar({ sideBarOpen, setSideBarOpen, section, setSecti
                 (<div style={{
                     opacity: sideBarOpen ? 1 : 0,
                     pointerEvents: sideBarOpen ? "auto" : "none",
-                    whiteSpace: "nowrap",
                 }}>
                     <div
                         style={{
@@ -126,28 +125,28 @@ export default function Sidebar({ sideBarOpen, setSideBarOpen, section, setSecti
                             }}
                         />
                     </div>
-                      <div
-    style={{
-      width: "100%",
-      minWidth: "220px",
-      maxWidth: "280px",
-      opacity: 1,
-      pointerEvents: "auto",
-    }}
-  >
-                    <h3>Frontend Developer</h3>
-                    <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p>
-                    <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
-                    <nav>
-                        <ul style={{ listStyle: "none", padding: 0, lineHeight: "2em" }}>
-                            <li className="nav-link" onClick={() => scrollToSection("experience")}>Experience</li>
-                            <li className="nav-link" onClick={() => scrollToSection("projects")}>Projects</li>
-                            <li className="nav-link" onClick={() => scrollToSection("skills")}>Skills</li>
-                            <li className="nav-link" onClick={() => scrollToSection("about")}>About</li>
-                            <li className="nav-link" onClick={() => scrollToSection("contact")}>Contact</li>
-                        </ul>
-                    </nav>
-                </div>
+                    <div
+                        style={{
+                            width: "100%",
+                            minWidth: "220px",
+                            maxWidth: "280px",
+                            opacity: 1,
+                            pointerEvents: "auto",
+                        }}
+                    >
+                        <h3>Frontend Developer</h3>
+                        <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p>
+                        <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
+                        <nav>
+                            <ul style={{ listStyle: "none", padding: 0, lineHeight: "2em" }}>
+                                <li className="nav-link" onClick={() => scrollToSection("experience")}>Experience</li>
+                                <li className="nav-link" onClick={() => scrollToSection("projects")}>Projects</li>
+                                <li className="nav-link" onClick={() => scrollToSection("skills")}>Skills</li>
+                                <li className="nav-link" onClick={() => scrollToSection("about")}>About</li>
+                                <li className="nav-link" onClick={() => scrollToSection("contact")}>Contact</li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 )}
         </aside>
