@@ -1,0 +1,36 @@
+
+
+export default function Section({ title, index }) {
+  const isEven = index % 2 === 0;
+
+  return (
+    <section
+    id={title.toLowerCase()}
+      style={{
+        minHeight: "70vh", // gives breathing room without feeling empty
+        padding: "60px 280px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+
+        background: isEven
+          ? "linear-gradient(180deg, #0f172a, #1e293b)"
+          : "linear-gradient(180deg, #1e293b, #334155)",
+
+        color: "white",
+        borderBottom: "1px solid rgba(255,255,255,0.1)",
+      }}
+    >
+      <h2 style={{ marginBottom: "20px", fontSize: "2rem" }}>
+        {title}
+      </h2>
+
+      <div style={{ maxWidth: "900px" }}>
+        {/* content will go here later */}
+        <p style={{ color: "rgba(255, 255, 255, 0.7)" }}>
+          Content for {title}
+        </p>
+      </div>
+    </section>
+  );
+}
