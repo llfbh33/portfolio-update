@@ -1,14 +1,7 @@
 // /components/About.js
 import { aboutMeString } from "../data/aboutMe";
 
-export default function About() {
-
-    const scrollToSection = (id) => {
-        const el = document.getElementById(id);
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+export default function About({scrollToSection}) {
 
 
     return (

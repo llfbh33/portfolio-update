@@ -3,6 +3,7 @@
 import Section from "./components/Section";
 import Sidebar from "./components/SideBar";
 import { useState } from "react";
+import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import About from "./components/About";
@@ -12,6 +13,7 @@ export default function Home() {
   let [selectedSection, setSelectedSection] = useState("Experience");
 
   let sections = [
+    "Hero",
     "Experience",
     "Projects",
     "Skills",
@@ -19,13 +21,20 @@ export default function Home() {
     "Contact",
   ];
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   return (
     <main>
       <div style={{
         display: "flex",
       }}>
-        <Sidebar sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
+        <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
         <div
           style={{
             overflowY: "scroll",
@@ -36,9 +45,10 @@ export default function Home() {
           }}>
           {sections.map((section, index) => (
             <Section key={section} title={section} index={index}>
+              {section === "Hero" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
               {section === "Experience" && <Experience />}
               {section === "Skills" && <Skills />}
-              {section === "About" && <About />}
+              {section === "About" && <About scrollToSection={scrollToSection} />}
             </Section>
           ))}
         </div>

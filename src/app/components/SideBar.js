@@ -6,7 +6,7 @@ import { personalSummary } from "../data/aboutMe";
 
 
 
-export default function Sidebar({ sideBarOpen, setSideBarOpen, section, setSection }) {
+export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, section, setSection }) {
     const sidebarRef = useRef(null);
 
     useEffect(() => {
@@ -139,11 +139,9 @@ export default function Sidebar({ sideBarOpen, setSideBarOpen, section, setSecti
                         <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
                         <nav>
                             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2em" }}>
-                                <li className="nav-link" onClick={() => scrollToSection("experience")}>Experience</li>
-                                <li className="nav-link" onClick={() => scrollToSection("projects")}>Projects</li>
-                                <li className="nav-link" onClick={() => scrollToSection("skills")}>Skills</li>
-                                <li className="nav-link" onClick={() => scrollToSection("about")}>About</li>
-                                <li className="nav-link" onClick={() => scrollToSection("contact")}>Contact</li>
+                                {appSections.map((section, index) => (
+                                    <li key={section} className="nav-link" onClick={() => scrollToSection(section.toLowerCase())}>{section}</li>
+                                ))}
                             </ul>
                         </nav>
                     </div>

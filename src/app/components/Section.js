@@ -21,9 +21,9 @@ export default function Section({ title, children, index }) {
         borderBottom: "1px solid rgba(255,255,255,0.1)",
       }}
     >
-      <h2 style={{ marginBottom: "20px", fontSize: "2rem" }}>
+      {title !== "Hero" && <h2 style={{ marginBottom: "20px", fontSize: "2rem" }}>
         {title}
-      </h2>
+      </h2>}
 
       <div>{children}</div>
 
