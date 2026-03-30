@@ -8,7 +8,7 @@ export default function Section({ title, children, index }) {
       id={title.toLowerCase()}
       style={{
         minHeight: "70vh", // gives breathing room without feeling empty
-        padding: "60px 280px",
+        padding: "60px 100px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

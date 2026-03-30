@@ -47,45 +47,71 @@ export default function Hero({ appSections, scrollToSection }) {
                 />
             </div> */}
             <div style={{
-                maxWidth: "900px",
+                // maxWidth: "900px",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
+                // alignItems: "center",
                 gap: "20px",
             }}>
 
                 {/* Headline */}
-                <h1 style={{
-                    fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
+                <h2 style={{
+                    fontSize: "clamp(1.5rem, 3vw, 3.5rem)",
                     fontWeight: "600",
                     lineHeight: "1.2",
-                    textAlign: "center",
+                    // textAlign: "center",
                     color: "white",
                 }}>
-                    Frontend Developer Building Clean, Interactive Experiences
-                </h1>
+                    Aubrie Woodbine is a product designer specializing in intuitive interfaces and data-driven tools.
+                </h2>
 
                 {/* Intro */}
-                <p style={{
-                    fontSize: "1.1rem",
-                    opacity: 0.8,
-                    maxWidth: "700px",
-                    lineHeight: "1.6",
-                    textAlign: "center",
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
                 }}>
-                    I enjoy creating intuitive, flexible interfaces that make complex systems feel simple to use.
-                    I’ve worked on data-driven dashboards and no-code tools, which has shaped how I think about usability and design.
-                </p>
+                    <MediaFrame
+                        src="/images/landscape-1.jpeg"
+                        width="50%"
+                        height="50%"
+                    />
+                    <p style={{
+                        fontSize: "1.1rem",
+                        opacity: 0.8,
+                        // maxWidth: "700px",
+                        lineHeight: "1.6",
+                        textAlign: "right",
+                        width: "100%",
+                    }}>
+                        I enjoy creating intuitive, flexible interfaces that make complex systems feel simple to use.
+                        I’ve worked on data-driven dashboards and no-code tools, which has shaped how I think about usability and design.
+                    </p>
+                </div>
+
 
                 {/* Current Focus */}
-                <p style={{
-                    fontSize: "0.95rem",
-                    opacity: 0.6,
-                    textAlign: "center",
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
                 }}>
-                    Currently working on: refining my portfolio, interactive UI systems, and component-driven design.
-                </p>
+
+                    <p style={{
+                        fontSize: "0.95rem",
+                        opacity: 0.6,
+                        textAlign: "left",
+                        width: "100%",
+                    }}>
+                        Currently working on: refining my portfolio, interactive UI systems, and component-driven design.
+                    </p>
+                    <MediaFrame
+                        src="/images/landscape-1.jpeg"
+                        width="20%"
+                        height="20%"
+                    />
+                </div>
 
                 {/* Buttons */}
                 <div style={{
@@ -93,6 +119,7 @@ export default function Hero({ appSections, scrollToSection }) {
                     gap: "12px",
                     flexWrap: "wrap",
                     marginTop: "10px",
+                    justifyContent: "center",
                 }}>
                     {sections.map((section) => (
                         <p onClick={() => scrollToSection(section.toLowerCase())}

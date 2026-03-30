@@ -2,6 +2,8 @@
 
 export default function MediaFrame({
     src,
+    width = "100%",
+    height = "100%",
     alt = "Image",
     borderRadius = "24px",
     objectFit = "cover",
@@ -11,7 +13,9 @@ export default function MediaFrame({
     return (
         <div
             style={{
-                position: "absolute",
+                // position: "absolute",
+                width,
+                height,
                 inset: 0,
                 borderRadius,
                 overflow: "hidden",
