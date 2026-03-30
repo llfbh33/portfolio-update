@@ -5,6 +5,7 @@ export default function Section({ title, children, index }) {
 
   return (
     <section
+    className="blu"
       id={title.toLowerCase()}
       style={{
         minHeight: "70vh", // gives breathing room without feeling empty

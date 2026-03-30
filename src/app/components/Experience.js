@@ -24,15 +24,16 @@ export default function Experience() {
       >
         {experienceObject.cards.map((card) => (
           <div
+            className="feature-card"
             key={card.title}
-            style={{
-              padding: "20px",
-              borderRadius: "20px",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-              backdropFilter: "blur(4px)",
-            }}
+            // style={{
+            //   padding: "20px",
+            //   borderRadius: "20px",
+            //   background: "rgba(255,255,255,0.06)",
+            //   border: "1px solid rgba(255,255,255,0.12)",
+            //   boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+            //   backdropFilter: "blur(4px)",
+            // }}
           >
             <h3
               style={{

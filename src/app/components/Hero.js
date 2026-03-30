@@ -2,16 +2,26 @@
 
 import MediaFrame from "./MediaFrame";
 
-const buttonStyle = {
+  const buttonStyle = {
     padding: "10px 18px",
     borderRadius: "999px",
-    background: "rgba(255,255,255,0.08)",
+    background: "hover"
+      ? "rgba(255,255,255,0.14)"
+      : "rgba(255,255,255,0.08)",
     border: "1px solid rgba(255,255,255,0.2)",
     color: "white",
     textDecoration: "none",
     cursor: "pointer",
     transition: "all 0.2s ease",
-};
+
+    transform: "hover"
+      ? "translateY(-3px) scale(1.03)"
+      : "translateY(0px) scale(1)",
+
+    boxShadow: "hover"
+      ? "0 8px 25px rgba(0, 123, 255, 0.25)"
+      : "0 2px 6px rgba(0,0,0,0.2)",
+  };
 
 export default function Hero({ appSections, scrollToSection }) {
     let sections = [
@@ -23,16 +33,17 @@ export default function Hero({ appSections, scrollToSection }) {
     ];
 
     return (
-        <section style={{
-            width: "100%",
-            minHeight: "100vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "40px 20px",
-            position: "relative", // important
-            overflow: "hidden",   // prevents image bleed
-        }}>
+        <section 
+            style={{
+                width: "100%",
+                minHeight: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "40px 20px",
+                position: "relative", // important
+                overflow: "hidden",   // prevents image bleed
+            }}>
             {/* <div style={{
                 position: "absolute",
                 top: "10%",
@@ -122,8 +133,10 @@ export default function Hero({ appSections, scrollToSection }) {
                     justifyContent: "center",
                 }}>
                     {sections.map((section) => (
-                        <p onClick={() => scrollToSection(section.toLowerCase())}
-                            style={buttonStyle}
+                        <p 
+                            className="button-style"
+                            onClick={() => scrollToSection(section.toLowerCase())}
+                            // style={buttonStyle}
                             key={section}
                         >
                             {section}
