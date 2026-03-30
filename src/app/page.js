@@ -38,8 +38,8 @@ export default function Home() {
         <div
           style={{
             overflowY: "scroll",
-            marginLeft: "20px",
-            padding: "20px",
+            marginLeft: "10px",
+            padding: "10px",
             height: "100vh",
             width: "100%",
           }}>

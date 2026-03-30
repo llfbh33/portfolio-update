@@ -1,5 +1,7 @@
 'use client';
 
+import MediaFrame from "./MediaFrame";
+
 const buttonStyle = {
     padding: "10px 18px",
     borderRadius: "999px",
@@ -28,7 +30,22 @@ export default function Hero({ appSections, scrollToSection }) {
             alignItems: "center",
             justifyContent: "center",
             padding: "40px 20px",
+            position: "relative", // important
+            overflow: "hidden",   // prevents image bleed
         }}>
+            {/* <div style={{
+                position: "absolute",
+                top: "10%",
+                left: "10%",
+                width: "45%",
+                height: "38%",
+                zIndex: 0,
+                opacity: 0.4, // quick global fade
+            }}>
+                <MediaFrame
+                    src="/images/landscape-1.jpeg"
+                />
+            </div> */}
             <div style={{
                 maxWidth: "900px",
                 width: "100%",
@@ -44,6 +61,7 @@ export default function Hero({ appSections, scrollToSection }) {
                     fontWeight: "600",
                     lineHeight: "1.2",
                     textAlign: "center",
+                    color: "white",
                 }}>
                     Frontend Developer Building Clean, Interactive Experiences
                 </h1>
