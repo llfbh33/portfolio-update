@@ -69,7 +69,7 @@ export default function Home() {
           style={{
             overflowY: "scroll",
             // marginLeft: "20px",
-            padding: "0px",
+            padding: "0px 0px 0px 40px",
             height: "100vh",
             width: "100%",
           }}>

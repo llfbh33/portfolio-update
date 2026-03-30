@@ -31,14 +31,14 @@ export default function Skills() {
       ))}
 
     </div>
-          <div
+          {/* <div
         style={{
           width: "45%",
           height: "100%",
           background: "rgba(255,255,255,0.06)",
           border: "1px solid rgba(255,255,255,0.12)",
         }}
-      ></div>
+      ></div> */}
     </div>
   );
 }

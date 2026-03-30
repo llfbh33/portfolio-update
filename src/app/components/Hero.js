@@ -2,12 +2,12 @@
 
 import MediaFrame from "./MediaFrame";
 
-  const buttonStyle = {
+const buttonStyle = {
     padding: "10px 18px",
     borderRadius: "999px",
     background: "hover"
-      ? "rgba(255,255,255,0.14)"
-      : "rgba(255,255,255,0.08)",
+        ? "rgba(255,255,255,0.14)"
+        : "rgba(255,255,255,0.08)",
     border: "1px solid rgba(255,255,255,0.2)",
     color: "white",
     textDecoration: "none",
@@ -15,13 +15,13 @@ import MediaFrame from "./MediaFrame";
     transition: "all 0.2s ease",
 
     transform: "hover"
-      ? "translateY(-3px) scale(1.03)"
-      : "translateY(0px) scale(1)",
+        ? "translateY(-3px) scale(1.03)"
+        : "translateY(0px) scale(1)",
 
     boxShadow: "hover"
-      ? "0 8px 25px rgba(0, 123, 255, 0.25)"
-      : "0 2px 6px rgba(0,0,0,0.2)",
-  };
+        ? "0 8px 25px rgba(0, 123, 255, 0.25)"
+        : "0 2px 6px rgba(0,0,0,0.2)",
+};
 
 export default function Hero({ appSections, scrollToSection }) {
     let sections = [
@@ -33,7 +33,7 @@ export default function Hero({ appSections, scrollToSection }) {
     ];
 
     return (
-        <section 
+        <section
             id="hero"
             style={{
                 width: "100%",
@@ -64,26 +64,27 @@ export default function Hero({ appSections, scrollToSection }) {
                 display: "flex",
                 flexDirection: "column",
                 // alignItems: "center",
-                gap: "20px",
+                gap: "40px",
+                marginTop: "60px",
             }}>
 
                 {/* Headline */}
-                                <div style={{
+                <div style={{
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",
                 }}>
 
-                <h2 style={{
-                    fontSize: "clamp(1.5rem, 3vw, 3.5rem)",
-                    fontWeight: "600",
-                    lineHeight: "1.2",
-                    textAlign: "left",
-                    color: "white",
-                }}>
-                    Hello, I am Aubrie,
-                </h2>
-                                    <div
+                    <h2 style={{
+                        fontSize: "clamp(1.5rem, 3vw, 3.5rem)",
+                        fontWeight: "600",
+                        lineHeight: "1.2",
+                        textAlign: "left",
+                        color: "white",
+                    }}>
+                        Hello, I am Aubrie,
+                    </h2>
+                    <div
                         style={{
                             width: "30%",
                             minHeight: "100px",
@@ -145,13 +146,13 @@ export default function Hero({ appSections, scrollToSection }) {
                     display: "flex",
                     gap: "12px",
                     flexWrap: "wrap",
-                    marginTop: "10px",
+                    marginTop: "50px",
                     justifyContent: "center",
-                    alignItems: "center",
-                    
+                    alignItems: "flex-start",
+
                 }}>
                     {sections.map((section) => (
-                        <p 
+                        <p
                             className="button-style"
                             onClick={() => scrollToSection(section.toLowerCase())}
                             // style={buttonStyle}
