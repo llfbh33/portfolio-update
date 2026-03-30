@@ -34,7 +34,7 @@ export default function MediaFrame({
                     height: "100%",
                     objectFit,
                     display: "block",
-                    filter: "grayscale(30%) brightness(0.6) contrast(1.1)",
+                    // filter: "grayscale(30%) brightness(0.6) contrast(1.1)",
                     transform: "scale(1.02)",
                 }}
             />

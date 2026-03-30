@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import About from "./components/About";
+import Projects from "./components/Projects";
 
 export default function Home() {
   let [sideBarOpen, setSideBarOpen] = useState(false);
@@ -76,6 +77,7 @@ export default function Home() {
             <Section key={section} title={section} index={index}>
               {section === "Hero" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
               {section === "Experience" && <Experience />}
+              {section === "Projects" && <Projects />}
               {section === "Skills" && <Skills />}
               {section === "About" && <About scrollToSection={scrollToSection} />}
             </Section>

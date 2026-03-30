@@ -34,6 +34,7 @@ export default function Hero({ appSections, scrollToSection }) {
 
     return (
         <section 
+            id="hero"
             style={{
                 width: "100%",
                 minHeight: "100vh",
@@ -48,13 +49,13 @@ export default function Hero({ appSections, scrollToSection }) {
                 position: "absolute",
                 top: "10%",
                 left: "10%",
-                width: "45%",
-                height: "38%",
+                width: "100%",
+                height: "80%",
                 zIndex: 0,
                 opacity: 0.4, // quick global fade
             }}>
                 <MediaFrame
-                    src="/images/landscape-1.jpeg"
+                    src="/images/abstract-background-1.jpg"
                 />
             </div> */}
             <div style={{
@@ -67,15 +68,28 @@ export default function Hero({ appSections, scrollToSection }) {
             }}>
 
                 {/* Headline */}
+                                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                }}>
+
                 <h2 style={{
                     fontSize: "clamp(1.5rem, 3vw, 3.5rem)",
                     fontWeight: "600",
                     lineHeight: "1.2",
-                    // textAlign: "center",
+                    textAlign: "left",
                     color: "white",
                 }}>
-                    Aubrie Woodbine is a product designer specializing in intuitive interfaces and data-driven tools.
+                    Hello, I am Aubrie,
                 </h2>
+                                    <div
+                        style={{
+                            width: "30%",
+                            minHeight: "100px",
+                        }}
+                    ></div>
+                </div>
 
                 {/* Intro */}
                 <div style={{
@@ -83,11 +97,12 @@ export default function Hero({ appSections, scrollToSection }) {
                     flexDirection: "row",
                     alignItems: "center",
                 }}>
-                    <MediaFrame
-                        src="/images/landscape-1.jpeg"
-                        width="50%"
-                        height="50%"
-                    />
+                    <div
+                        style={{
+                            width: "30%",
+                            minHeight: "100px",
+                        }}
+                    ></div>
                     <p style={{
                         fontSize: "1.1rem",
                         opacity: 0.8,
@@ -117,11 +132,12 @@ export default function Hero({ appSections, scrollToSection }) {
                     }}>
                         Currently working on: refining my portfolio, interactive UI systems, and component-driven design.
                     </p>
-                    <MediaFrame
-                        src="/images/landscape-1.jpeg"
-                        width="20%"
-                        height="20%"
-                    />
+                    <div
+                        style={{
+                            width: "30%",
+                            minHeight: "100px",
+                        }}
+                    ></div>
                 </div>
 
                 {/* Buttons */}
@@ -131,6 +147,8 @@ export default function Hero({ appSections, scrollToSection }) {
                     flexWrap: "wrap",
                     marginTop: "10px",
                     justifyContent: "center",
+                    alignItems: "center",
+                    
                 }}>
                     {sections.map((section) => (
                         <p 
