@@ -40,6 +40,7 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
             id="heroBar"
             ref={sidebarRef}
             style={{
+                zIndex: 1000,
                 width: sideBarOpen ? "400px" : "60px",
                 height: "100vh",
                 background: "#111827",

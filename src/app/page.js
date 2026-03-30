@@ -64,12 +64,12 @@ export default function Home() {
         style={{
           display: "flex",
         }}>
-        {/* <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} /> */}
+        <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
         <div
           style={{
             overflowY: "scroll",
             // marginLeft: "20px",
-            padding: "40px",
+            padding: "0px",
             height: "100vh",
             width: "100%",
           }}>

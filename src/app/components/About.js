@@ -1,7 +1,7 @@
 // /components/About.js
 import { aboutMeString } from "../data/aboutMe";
 
-export default function About({scrollToSection}) {
+export default function About({ scrollToSection }) {
 
 
     return (
@@ -33,15 +33,21 @@ export default function About({scrollToSection}) {
                 }}
             >
                 <p
-                    href="#"
-                    style={buttonStyle}
+                    className="button-style"
+                    onClick={() =>
+                        window.open(
+                            "https://docs.google.com/document/d/1_Hw2HF0YgszRQC8y3ldnmuvPuu2QP7KcxMOs-kKIhA4/edit?usp=sharing",
+                            "_blank",
+                            "noopener,noreferrer"
+                        )
+                    }
                 >
                     Resume
                 </p>
 
                 <p
+                    className="button-style"
                     onClick={() => scrollToSection('contact')}
-                    style={buttonStyle}
                 >
                     Contact Me
                 </p>

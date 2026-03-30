@@ -117,7 +117,33 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  /* height: 100%; */
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.305);
+}
+
+
+
+/* SKILLS HEADING STYLING */
+.skills-headings {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.skills-headings h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .skills-headings {
+    flex-direction: column;
+  }
+
+  .skills-headings h2 {
+    width: 100%;
+  }
 }
