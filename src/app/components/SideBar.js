@@ -96,7 +96,7 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
                     opacity: sideBarOpen ? 1 : 0,
                     pointerEvents: sideBarOpen ? "auto" : "none",
                 }}>
-                    <div
+                    {/* <div
                         style={{
                             width: "60%",
                             aspectRatio: "1 / 1",
@@ -124,7 +124,7 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
                                 objectFit: "cover",
                             }}
                         />
-                    </div>
+                    </div> */}
                     <div
                         style={{
                             width: "100%",
@@ -135,7 +135,7 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
                         }}
                     >
                         <h3>Frontend Developer</h3>
-                        <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p>
+                        {/* <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p> */}
                         <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
                         <nav>
                             <ul style={{ listStyle: "none", padding: 0, lineHeight: "2em" }}>

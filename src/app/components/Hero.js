@@ -11,7 +11,15 @@ const buttonStyle = {
     transition: "all 0.2s ease",
 };
 
-export default function Hero() {
+export default function Hero({ appSections, scrollToSection }) {
+    let sections = [
+        "Experience",
+        "Projects",
+        "Skills",
+        "About",
+        "Contact",
+    ];
+
     return (
         <section style={{
             width: "100%",
@@ -68,13 +76,18 @@ export default function Hero() {
                     flexWrap: "wrap",
                     marginTop: "10px",
                 }}>
-                    <a href="#about" style={buttonStyle}>About</a>
-                    <a href="#experience" style={buttonStyle}>Experience</a>
-                    <a href="#projects" style={buttonStyle}>Projects</a>
-                    <a href="#contact" style={buttonStyle}>Contact</a>
+                    {sections.map((section) => (
+                        <p onClick={() => scrollToSection(section.toLowerCase())}
+                            style={buttonStyle}
+                            key={section}
+                        >
+                            {section}
+                        </p>
+                    ))}
                 </div>
 
             </div>
         </section>
     );
 }
+

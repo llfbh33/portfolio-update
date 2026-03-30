@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 
 export default function Home() {
-  let [sideBarOpen, setSideBarOpen] = useState(true);
+  let [sideBarOpen, setSideBarOpen] = useState(false);
   let [selectedSection, setSelectedSection] = useState("Experience");
 
   let sections = [
