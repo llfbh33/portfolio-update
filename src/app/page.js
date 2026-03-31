@@ -8,13 +8,14 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export default function Home() {
   let [sideBarOpen, setSideBarOpen] = useState(false);
   let [selectedSection, setSelectedSection] = useState("Experience");
 
   let sections = [
-    "Hero",
+    "Home",
     "Experience",
     "Projects",
     "Skills",
@@ -75,11 +76,12 @@ export default function Home() {
           }}>
           {sections.map((section, index) => (
             <Section key={section} title={section} index={index}>
-              {section === "Hero" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
+              {section === "Home" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
               {section === "Experience" && <Experience />}
               {section === "Projects" && <Projects />}
               {section === "Skills" && <Skills />}
               {section === "About" && <About scrollToSection={scrollToSection} />}
+              {section === "Contact" && <Contact />}
             </Section>
           ))}
         </div>

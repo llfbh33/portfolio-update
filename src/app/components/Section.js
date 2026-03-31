@@ -2,7 +2,7 @@
 
 export default function Section({ title, children, index }) {
   const isEven = index % 2 === 0;
-  const isHero = title === "Hero";
+  const isHero = title === "Home";
   const isContact = title === "Contact";
 
   return (
