@@ -4,7 +4,7 @@ import { experienceObject } from "../data/sectionObjects";
 export default function Experience() {
   return (
     <div style={{ maxWidth: "2000px" }}>
-      <p
+      {/* <p
         style={{
           color: "rgba(255,255,255,0.8)",
           lineHeight: "1.7",
@@ -13,7 +13,35 @@ export default function Experience() {
         }}
       >
         {experienceObject.intro}
-      </p>
+      </p> */}
+      {experienceObject.jobs.map((job) => (
+        <div style={{
+          width: "40%",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.305)",
+          marginBottom: "20px",
+          display: "flex",
+          flexDirection: "column",
+          gap: "4px",
+          paddingBottom: "6px"
+        }}>
+          <p
+            style={{
+              margin: 0,
+              opacity: 0.7
+            }}
+          >
+            {`${job.title} • ${job.company}`}
+          </p>
+          <p
+            style={{
+              margin: 0,
+              opacity: 0.7
+            }}
+          >
+            {`${job.started} - ${job.ended}`}
+          </p>
+        </div>
+      ))}
 
       <div
         style={{
@@ -26,14 +54,6 @@ export default function Experience() {
           <div
             className="feature-card"
             key={card.title}
-            // style={{
-            //   padding: "20px",
-            //   borderRadius: "20px",
-            //   background: "rgba(255,255,255,0.06)",
-            //   border: "1px solid rgba(255,255,255,0.12)",
-            //   boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-            //   backdropFilter: "blur(4px)",
-            // }}
           >
             <h3
               style={{
@@ -47,13 +67,22 @@ export default function Experience() {
 
             <p
               style={{
-                margin: 0,
-                color: "rgba(255,255,255,0.78)",
-                lineHeight: "1.6",
-                fontSize: "0.95rem",
+                marginTop: 0,
+                color: "rgba(255, 255, 255, 0.95)",
+                lineHeight: "1.5",
+                fontSize: "1rem",
               }}
             >
-              {card.text}
+              {card.action}
+            </p>
+            <p
+              style={{
+                marginTop: 0,
+                color: "rgba(255, 255, 255, 0.68)",
+                lineHeight: "1.5",
+                fontSize: "0.9rem",
+              }}>
+              {card.details}
             </p>
           </div>
         ))}

@@ -1,6 +1,7 @@
 'use client';
 
 import MediaFrame from "./MediaFrame";
+import { heroObject } from "../data/sectionObjects";
 
 
 
@@ -41,12 +42,12 @@ export default function Hero({ appSections, scrollToSection }) {
             </div> */}
             <div style={{
                 // maxWidth: "900px",
-                width: "100%",
+                width: "80%",
                 display: "flex",
                 flexDirection: "column",
                 // alignItems: "center",
-                gap: "40px",
-                marginTop: "60px",
+                gap: "20px",
+                // marginTop: "60px",
             }}>
 
                 {/* Headline */}
@@ -60,10 +61,12 @@ export default function Hero({ appSections, scrollToSection }) {
                         fontSize: "clamp(1.5rem, 3vw, 3.5rem)",
                         fontWeight: "600",
                         lineHeight: "1.2",
-                        textAlign: "left",
+                        // textAlign: "left",
                         color: "white",
+                        borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
+                        paddingLeft: "10px"
                     }}>
-                        Hello, I am Aubrie,
+                        {heroObject.intro}
                     </h2>
                     <div
                         style={{
@@ -86,15 +89,16 @@ export default function Hero({ appSections, scrollToSection }) {
                         }}
                     ></div>
                     <p style={{
-                        fontSize: "1.1rem",
+                        fontSize: "1.4rem",
                         opacity: 0.8,
                         // maxWidth: "700px",
                         lineHeight: "1.6",
                         textAlign: "right",
                         width: "100%",
+                        borderRight: "1px solid rgba(255, 255, 255, 0.305)",
+                        paddingRight: "10px"
                     }}>
-                        I enjoy creating intuitive, flexible interfaces that make complex systems feel simple to use.
-                        I’ve worked on data-driven dashboards and no-code tools, which has shaped how I think about usability and design.
+                        {heroObject.introStatement}
                     </p>
                 </div>
 
@@ -107,12 +111,14 @@ export default function Hero({ appSections, scrollToSection }) {
                 }}>
 
                     <p style={{
-                        fontSize: "0.95rem",
-                        opacity: 0.6,
+                        fontSize: "1.2rem",
+                        opacity: 0.7,
                         textAlign: "left",
                         width: "100%",
+                        borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
+                        paddingLeft: "10px"
                     }}>
-                        Currently working on: refining my portfolio, interactive UI systems, and component-driven design.
+                        {heroObject.workingOn}
                     </p>
                     <div
                         style={{
@@ -133,14 +139,16 @@ export default function Hero({ appSections, scrollToSection }) {
 
                 }}>
                     {sections.map((section) => (
-                        <p
-                            className="button-style"
-                            onClick={() => scrollToSection(section.toLowerCase())}
-                            // style={buttonStyle}
-                            key={section}
-                        >
-                            {section}
-                        </p>
+                        <>
+                            {section !== 'Contact' && <p
+                                className="button-style"
+                                onClick={() => scrollToSection(section.toLowerCase())}
+                                // style={buttonStyle}
+                                key={section}
+                            >
+                                {section}
+                            </p>}
+                        </>
                     ))}
                 </div>
 

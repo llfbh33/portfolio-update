@@ -26,6 +26,13 @@ export default function Projects() {
           <div
             className="feature-card"
             key={card.title}
+            onClick={() =>
+              window.open(
+                `${card.url}`,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
           >
             <h3
               style={{
