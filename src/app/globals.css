@@ -71,6 +71,10 @@ body {
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.25);
 }
 
+.contact-button {
+  width: 300px;
+}
+
 
 .feature-card {
   padding: 20px;

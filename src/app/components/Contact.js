@@ -1,23 +1,30 @@
-
+import { useState } from "react";
 
 export default function Contact() {
+    const [message, setMessage] = useState("");
+
+    let messageOptions = [
+        "",
+        "...sending",
+        "Thank you for reaching out, I will be in touch soon!",
+    ];
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setMessage(messageOptions[1]);
 
         const form = e.target;
         const data = new FormData(form);
 
-        // await fetch("https://formspree.io/f/xlgobqog", {
-        //     method: "POST",
-        //     body: data,
-        //     headers: {
-        //         Accept: "application/json",
-        //     },
-        // });
+        await fetch("https://formspree.io/f/xlgobqog", {
+            method: "POST",
+            body: data,
+            headers: {
+                Accept: "application/json",
+            },
+        });
 
-
-        alert("Message sent! Thank you for reaching out.");
+        setMessage(messageOptions[2]);
         form.reset();
     }
 
@@ -61,11 +68,11 @@ export default function Contact() {
                             color: "#fff",
                         }}
                     />
-
                     <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
                         style={{
                             width: "50%",
                             padding: "10px",
@@ -78,6 +85,18 @@ export default function Contact() {
                     {/*honeypot field for spam bots, should be left empty */}
                     <input type="text" name="_gotcha" style={{ display: "none" }} />
                 </div>
+                <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    style={{
+                        padding: "10px",
+                        borderRadius: "8px",
+                        border: "1px solid rgba(255,255,255,0.2)",
+                        background: "rgba(255,255,255,0.06)",
+                        color: "#fff",
+                    }}
+                />
                 <textarea
                     name="message"
                     placeholder="Message"
@@ -92,19 +111,22 @@ export default function Contact() {
                     }}
                 />
 
-                <button
-                    type="submit"
-                    style={{
-                        padding: "10px 20px",
-                        borderRadius: "8px",
-                        border: "none",
-                        background: "rgba(255,255,255,0.1)",
-                        color: "#fff",
-                        cursor: "pointer",
-                    }}
-                >
-                    Send
-                </button>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    marginRight: "10%",
+                }}>
+                    <p>
+                        {message}
+                    </p>
+                    <button
+                        type="submit"
+                        className="button-style contact-button"
+                    >
+                        Say Hello
+                    </button>
+                </div>
             </form>
         </div>
     )
