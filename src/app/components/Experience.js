@@ -3,7 +3,7 @@ import { experienceObject } from "../data/sectionObjects";
 
 export default function Experience() {
   return (
-    <div style={{ maxWidth: "1000px" }}>
+    <div style={{ maxWidth: "2000px" }}>
       <p
         style={{
           color: "rgba(255,255,255,0.8)",
@@ -18,7 +18,7 @@ export default function Experience() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "20px",
         }}
       >

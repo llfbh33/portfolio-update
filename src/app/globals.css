@@ -103,10 +103,27 @@ body {
 }
 
 .hero-styling {
-  background-image: radial-gradient(circle at 50% 40%, rgba(72, 86, 107, 0.65) 0%, rgba(2, 6, 23, 0.9) 80%), url('/images/abstract-background-1.jpg');
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(72, 86, 107, 0.65) 0%, rgba(2, 6, 23, 0.9) 80%),
+    url('/images/abstract-background-1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
 }
 
 .even-styling,
