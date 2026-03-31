@@ -18,56 +18,76 @@ export const experienceObject = {
       details: "Built features incrementally, focusing on small components, edge cases, and reliable end-to-end behavior.",
     },
     {
+      title: "Query Builder & Data Tools",
+      action: "Built core product features including an API query builder with a no-code interface, allowing users to construct and run custom data queries.",
+      details: "Revisited SQL concepts to ensure the UI translated cleanly into valid queries, building features incrementally and testing regularly as complexity increased.",
+    },
+    {
       title: "Data Visualization",
       action: "Created interactive chart components including line, bar, pie, and multi-level visualizations using React and D3.js.",
-      details: "",
+      details: "Spent time working through D3’s documentation to understand how data maps to visuals, handling scales, formatting, and structure to produce accurate and readable charts.",
     },
     {
       title: "Dynamic UI Features",
-      action: "Implemented drag-and-drop layouts, component resizing, and real-time configuration updates for flexible user-driven interfaces.",
-      details: "",
+      action: "Built dashboard-compatible UI components, including an activity feed that surfaced user events like calls, messages, emails, and notes, with quick access to related data.",
+      details: "Structured event data to drive a real-time activity feed, handling ordering, interaction, and navigation so users could quickly move from high-level updates to detailed views.",
     },
+    // {
+    //   title: "API Integration",
+    //   action: "Connected frontend components to backend APIs to drive dynamic, data-driven UI across the application.",
+    //   details: "Worked with both global state and API data, shaping and updating information as needed while maintaining consistent structure and alignment with backend schemas.",
+    // },
     {
-      title: "Core Product Features",
-      action: "Built features such as an API query builder, CRUD notes system, and an interactive activity feed with messaging and media playback.",
-      details: "",
-    },
-    {
-      title: "API Integration",
-      action: "Integrated frontend components with backend APIs, transforming and structuring data for reliable use across the application.",
-      details: "",
+      title: "Rich Text Editor",
+      action: "Contributed to building a rich text editor from scratch, adding features for formatting, media embedding, and structured content creation.",
+      details: "Expanded the editor with features like headings, lists, media input, and table of contents, focusing on keeping the editing experience flexible while maintaining structured output for consistent content creation.",
     },
     {
       title: "Small Team Collaboration",
-      action: "Worked closely with leadership in a small team environment, contributing to planning, feature direction, and rapid product iteration.",
-      details: "",
-    }
+      action: "Worked in a small team environment, contributing to planning, team discussions, and communication of product updates to stakeholders.",
+      details: "Participated in daily standups and planning sessions, presented work, gave and received feedback, and documented completed features to produce a weekly product update for customers.",
+    },
   ]
 };
 
 export const projectsObject = {
   title: "Projects",
   intro:
-    "A selection of personal projects that showcase my skills in frontend development, interactive design, and data visualization.",
+    "A few projects that reflect how I approach building interfaces and systems.",
   cards:
     [
       {
         title: "Pen Crafted",
-        text: "A social creative writing platform built with React and Node.js, featuring a rich text editor, user profiles, and a community feed for sharing stories and receiving feedback.",
+        text: "A content-heavy application combining structured writing tools, rich text editing, and a social feedback system into a clean, intuitive user experience.",
         images: [
           "penCrafted-3.png",
           "penCrafted-4.png"
         ],
-        url: "https://capstone-project-lm4v.onrender.com/"
+        url: "https://capstone-project-lm4v.onrender.com/",
+        gitUrl: "https://github.com/llfbh33/Capstone-Project",
+        error: "",
       },
       {
         title: "Fair Share",
-        text: "A React-based tool for calculating and visualizing equitable cost-sharing among groups, with dynamic input forms and interactive charts to display results.",
+        text: "A collaborative expense-sharing application where I contributed reusable UI components, focusing on clean structure and consistent user interactions.",
         images: [
           "fairShare-1.png",
           "fairShare-2.png",
         ],
-        url: "https://fairshare-f8a7.onrender.com/"
+        url: "https://fairshare-f8a7.onrender.com/",
+        gitUrl: "https://github.com/OrangeTabia/fairshare",
+        error: "Demo currently limited (backend offline)",
+      }, 
+      {
+        title: "Portfolio",
+        text: "A portfolio designed as a UI system, built around reusable components, consistent layout patterns, and interactions that keep complex structures simple and intuitive.",
+        images: [
+          "portfolio-1.png",
+          "portfolio-2.png",
+        ],
+        url: null,
+        gitUrl: "https://github.com/llfbh33/portfolio-update",
+        error: "",
       }
 
     ]

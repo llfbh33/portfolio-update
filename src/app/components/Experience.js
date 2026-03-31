@@ -46,7 +46,7 @@ export default function Experience() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
           gap: "20px",
         }}
       >
@@ -60,6 +60,7 @@ export default function Experience() {
                 marginTop: 0,
                 marginBottom: "12px",
                 fontSize: "1.1rem",
+                textDecorationLine: "underline"
               }}
             >
               {card.title}

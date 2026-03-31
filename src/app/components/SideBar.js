@@ -135,7 +135,7 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
                             pointerEvents: "auto",
                         }}
                     >
-                        <h3>Frontend Developer</h3>
+                        <h3>Web Developer</h3>
                         {/* <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p> */}
                         <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
                         <nav>

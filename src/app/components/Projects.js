@@ -1,4 +1,6 @@
 import { projectsObject } from "../data/sectionObjects";
+import { IoMdEye } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   console.log(projectsObject)
@@ -18,21 +20,14 @@ export default function Projects() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))",
           gap: "20px",
         }}
       >
         {projectsObject.cards.map((card) => (
           <div
-            className="feature-card"
+            className="feature-no-hover"
             key={card.title}
-            onClick={() =>
-              window.open(
-                `${card.url}`,
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
           >
             <h3
               style={{
@@ -55,18 +50,7 @@ export default function Projects() {
               {card.text}
             </p>
             <div
-              style={{
-                marginTop: "40px",
-                minHeight: "380px",
-                borderRadius: "36px",
-                border: "1px solid rgba(255,255,255,0.18)",
-                background: "rgba(255,255,255,0.03)",
-                boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-                backdropFilter: "blur(4px)",
-                padding: "28px",
-                position: "relative",
-                overflow: "hidden",
-              }}
+              className="project-images-container"
             >
               {/* <div
                 style={{
@@ -136,6 +120,46 @@ export default function Projects() {
                   }}
                 />
               </div>
+            </div>
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+            }}>
+              <p
+                className={card.error || card.url === null ? "button-deactivated" : "button-style"}
+                onClick={() => {
+                  e.stopPropagation();
+                  if (card.error) return;
+                  window.open(
+                    `${card.url}`,
+                    "_blank",
+                    "noopener,noreferrer"
+                  )
+                }}
+              >
+                <IoMdEye />
+              </p>
+              <p
+                className="button-style"
+                onClick={() => 
+                    window.open(
+                      `${card.gitUrl}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }
+              >
+                <FaGithub />
+              </p>
+              {card.error &&
+                <p style={{
+                  width: "100%",
+                  textAlign: "right",
+                }}>
+                  {card.error}
+                </p>
+              }
             </div>
           </div>
           // </div>
