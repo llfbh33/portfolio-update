@@ -40,10 +40,18 @@ export const projectsObject = {
       {
         title: "Pen Crafted",
         text: "A social creative writing platform built with React and Node.js, featuring a rich text editor, user profiles, and a community feed for sharing stories and receiving feedback.",
+        images: [
+          "penCrafted-3.png",
+          "penCrafted-4.png"
+        ]
       },
       {
         title: "Fair Share",
         text: "A React-based tool for calculating and visualizing equitable cost-sharing among groups, with dynamic input forms and interactive charts to display results.",
+        images: [
+          "fairShare-1.png",
+          "fairShare-2.png",
+        ]
       }
 
     ]
