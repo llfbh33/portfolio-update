@@ -80,10 +80,10 @@ export default function Home() {
           <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} isWide={isWide} />
           <div
             style={{
-              overflowY: "scroll",
+              // overflowY: "scroll",
               overflowY: "auto",
               padding: isWide ? "0px 0px 0px 40px" : "0px",
-              height: "100vh",
+              // height: "100vh",
               width: "100%",
             }}>
             {sections.map((section, index) => (
