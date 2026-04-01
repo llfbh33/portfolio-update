@@ -17,15 +17,8 @@ export default function Experience() {
       {experienceObject.jobs.map((job) => (
         <div 
           key={job.company}
-          style={{
-            width: "40%",
-            borderBottom: "1px solid rgba(255, 255, 255, 0.305)",
-            marginBottom: "20px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "4px",
-            paddingBottom: "6px"
-        }}>
+          className="position-label"
+        >
           <p
             style={{
               margin: 0,
@@ -48,7 +41,7 @@ export default function Experience() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "20px",
         }}
       >

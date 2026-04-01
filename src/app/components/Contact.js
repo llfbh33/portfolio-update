@@ -32,7 +32,7 @@ export default function Contact() {
 
     return (
         <div style={{ maxWidth: "2000px" }}>
-            <div style={{ width: "60%" }}>
+            <div style={{ width: "100%" }}>
                 <p>
                     If you are interested in working together, what I have been working on
                     recently, or just want to chat, feel free to reach out! I am always

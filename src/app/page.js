@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 export default function Home() {
   let [sideBarOpen, setSideBarOpen] = useState(false);
   let [selectedSection, setSelectedSection] = useState("Experience");
+  const [isWide, setIsWide] = useState(false);
 
   let sections = [
     "Home",
@@ -53,39 +54,52 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWide(window.innerWidth > 1000);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   return (
     <>
-    <div ref={cursorRef} className="cursor-circle"></div>
-    <main
-      className="blu"
-    >
-      
-      <div
-        style={{
-          display: "flex",
-        }}>
-        <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
+      <div ref={cursorRef} className="cursor-circle"></div>
+      <main
+        className="blu"
+      >
+
         <div
           style={{
-            overflowY: "scroll",
-            padding: "0px 0px 0px 40px",
-            height: "100vh",
-            width: "100%",
+            display: "flex",
           }}>
-          {sections.map((section, index) => (
-            <Section key={section} title={section} index={index}>
-              {section === "Home" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
-              {section === "Experience" && <Experience />}
-              {section === "Projects" && <Projects />}
-              {section === "Skills" && <Skills />}
-              {section === "About" && <About scrollToSection={scrollToSection} />}
-              {section === "Contact" && <Contact />}
-            </Section>
-          ))}
+          {isWide && (
+            <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
+          )}
+          <div
+            style={{
+              overflowY: "scroll",
+              padding: isWide ? "0px 0px 0px 40px" : "0px",
+              height: "100vh",
+              width: "100%",
+            }}>
+            {sections.map((section, index) => (
+              <Section key={section} title={section} index={index}>
+                {section === "Home" && (<Hero appSections={sections} scrollToSection={scrollToSection} />)}
+                {section === "Experience" && <Experience />}
+                {section === "Projects" && <Projects />}
+                {section === "Skills" && <Skills />}
+                {section === "About" && <About scrollToSection={scrollToSection} isWide={isWide} />}
+                {section === "Contact" && <Contact />}
+              </Section>
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
     </>
   );
 }

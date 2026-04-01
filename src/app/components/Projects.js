@@ -17,13 +17,7 @@ export default function Projects() {
         {projectsObject.intro}
       </p>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(450px, 1fr))",
-          gap: "20px",
-        }}
-      >
+      <div className="project-grid">
         {projectsObject.cards.map((card) => (
           <div
             className="feature-no-hover"
