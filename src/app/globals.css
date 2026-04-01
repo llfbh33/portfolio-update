@@ -18,7 +18,7 @@ body {
 /* Navigation Styling */
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255,255,255,0.75);
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -27,6 +27,7 @@ body {
   cursor: pointer;
   color: rgb(255, 255, 255);
   transform: translateX(4px);
+  filter: drop-shadow(1px 0 2px rgba(255, 255, 255, 0.316));
 }
 
 
@@ -71,6 +72,7 @@ body {
   color: rgb(240, 221, 246);
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.25);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.498));
 }
 
 .button-style,
