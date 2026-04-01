@@ -18,7 +18,7 @@ body {
 /* Navigation Styling */
 
 .nav-link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -195,6 +195,27 @@ body {
 
 
 
+/* HERO SECTION STYLING */
+.hero-container-2 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .hero-container-2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container-2 {
+    /* gap: 12px; */
+  }
+}
+
+
 /* SKILLS HEADING STYLING */
 .skills-headings {
   width: 100%;
@@ -207,6 +228,35 @@ body {
   margin-bottom: 20px;
   font-size: 2rem;
   width: 50%;
+}
+
+.skill-card {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.386);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .skills-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 600px) {

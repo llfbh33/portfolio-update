@@ -102,15 +102,20 @@ export const skillsObject = {
       items: ["JavaScript", "React", "TypeScript", "HTML", "CSS"]
     },
     {
+      heading: "Backend",
+      items: ["Python", "Flask", "SQL", "REST APIs",  "SQLAlchemy", "PostgreSQL"]
+    },
+    {
       heading: "Tools",
       items: ["Git", "GitHub", "MongoDB", "D3.js"]
     },
-    {
-      heading: "Currently Learning",
-      items: ["TypeScript", "Modern frontend patterns"]
-    }
   ]
 };
+
+export const currentlyLearning = {
+      heading: "Currently Learning",
+      items: ["TypeScript", "Modern frontend patterns"]
+}
 
 
 export const heroObject = {

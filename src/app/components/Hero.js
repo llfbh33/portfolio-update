@@ -24,31 +24,10 @@ export default function Hero({ appSections, scrollToSection }) {
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "40px 20px",
-                position: "relative", // important
-                overflow: "hidden",   // prevents image bleed
+                position: "relative",
+                overflow: "hidden",   
             }}>
-            {/* <div style={{
-                position: "absolute",
-                top: "10%",
-                left: "10%",
-                width: "100%",
-                height: "80%",
-                zIndex: 0,
-                opacity: 0.4, // quick global fade
-            }}>
-                <MediaFrame
-                    src="/images/abstract-background-1.jpg"
-                />
-            </div> */}
-            <div style={{
-                // maxWidth: "900px",
-                width: "80%",
-                display: "flex",
-                flexDirection: "column",
-                // alignItems: "center",
-                gap: "20px",
-                // marginTop: "60px",
-            }}>
+            <div className="hero-container-2">
 
                 {/* Headline */}
                 <div style={{
