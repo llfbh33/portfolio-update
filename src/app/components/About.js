@@ -1,7 +1,7 @@
 // /components/About.js
 import { aboutMeObject } from "../data/aboutMe";
 
-export default function About({ scrollToSection, isWide }) {
+export default function About({ scrollToSection }) {
 
     return (
         <div className="about-section">

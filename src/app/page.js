@@ -56,7 +56,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsWide(window.innerWidth > 1000);
+      setIsWide(window.innerWidth > 700);
     };
 
     handleResize();
@@ -77,9 +77,7 @@ export default function Home() {
           style={{
             display: "flex",
           }}>
-          {isWide && (
-            <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} section={selectedSection} setSection={setSelectedSection} />
-          )}
+          <Sidebar appSections={sections} sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen} isWide={isWide} />
           <div
             style={{
               overflowY: "scroll",
@@ -93,7 +91,7 @@ export default function Home() {
                 {section === "Experience" && <Experience />}
                 {section === "Projects" && <Projects />}
                 {section === "Skills" && <Skills />}
-                {section === "About" && <About scrollToSection={scrollToSection} isWide={isWide} />}
+                {section === "About" && <About scrollToSection={scrollToSection} />}
                 {section === "Contact" && <Contact />}
               </Section>
             ))}
