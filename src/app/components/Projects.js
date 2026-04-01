@@ -3,7 +3,7 @@ import { IoMdEye } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
-  console.log(projectsObject)
+
   return (
     <div style={{ maxWidth: "2000px" }}>
       <p
@@ -128,7 +128,7 @@ export default function Projects() {
             }}>
               <p
                 className={card.error || card.url === null ? "button-deactivated" : "button-style"}
-                onClick={() => {
+                onClick={(e) => {
                   e.stopPropagation();
                   if (card.error) return;
                   window.open(
@@ -138,7 +138,7 @@ export default function Projects() {
                   )
                 }}
               >
-                <IoMdEye />
+                <IoMdEye style={{ fontSize: "1.2rem" }} />
               </p>
               <p
                 className="button-style"
@@ -150,7 +150,7 @@ export default function Projects() {
                     )
                   }
               >
-                <FaGithub />
+                <FaGithub style={{ fontSize: "1.2rem" }} />
               </p>
               {card.error &&
                 <p style={{

@@ -15,14 +15,16 @@ export default function Experience() {
         {experienceObject.intro}
       </p> */}
       {experienceObject.jobs.map((job) => (
-        <div style={{
-          width: "40%",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.305)",
-          marginBottom: "20px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "4px",
-          paddingBottom: "6px"
+        <div 
+          key={job.company}
+          style={{
+            width: "40%",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.305)",
+            marginBottom: "20px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "4px",
+            paddingBottom: "6px"
         }}>
           <p
             style={{

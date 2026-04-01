@@ -20,12 +20,12 @@ export const experienceObject = {
     {
       title: "Query Builder & Data Tools",
       action: "Built core product features including an API query builder with a no-code interface, allowing users to construct and run custom data queries.",
-      details: "Revisited SQL concepts to ensure the UI translated cleanly into valid queries, building features incrementally and testing regularly as complexity increased.",
+      details: "Revisited SQL concepts to ensure the UI translated cleanly into valid queries, built features incrementally and tested regularly as complexity increased.",
     },
     {
       title: "Data Visualization",
       action: "Created interactive chart components including line, bar, pie, and multi-level visualizations using React and D3.js.",
-      details: "Spent time working through D3’s documentation to understand how data maps to visuals, handling scales, formatting, and structure to produce accurate and readable charts.",
+      details: "Spent time working through D3’s documentation to understand how data maps to visuals, handled scales, formatting, and structure to produce accurate and readable charts.",
     },
     {
       title: "Dynamic UI Features",

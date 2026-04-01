@@ -1,4 +1,4 @@
-
+import { FaGithub, FaLinkedin, FaRegFile } from "react-icons/fa";
 
 export const personalSummary = `I’m a frontend-focused JavaScript developer specializing in React, with experience building dynamic, data-driven applications and complex UI systems. 
 My work includes interactive data visualizations, drag-and-drop interfaces, and real-time user-driven workflows. I’ve collaborated closely in small teams to ship product features 
@@ -14,3 +14,21 @@ I try to get away from my desk once in a while. When I do you’ll usually find 
 Right now, I’m focused on continuing to grow as a frontend developer, especially with TypeScript and modern UI patterns, while building applications that are both functional and enjoyable to use.`,
 image: "images/aboutMe.jpg",
 }
+
+export const devLinks = [
+  {
+    name: "github",
+    url: "https://github.com/llfbh33",
+    icon: FaGithub,
+  },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/aubriewoodbine/",
+    icon: FaLinkedin,
+  },
+  {
+    name: "resume",
+    url: "https://docs.google.com/document/d/1_Hw2HF0YgszRQC8y3ldnmuvPuu2QP7KcxMOs-kKIhA4/edit?usp=sharing",
+    icon: FaRegFile,
+  },
+];

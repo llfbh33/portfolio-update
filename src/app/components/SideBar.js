@@ -2,7 +2,10 @@
 
 import { RiArrowLeftDoubleFill, RiArrowRightDoubleFill } from "react-icons/ri";
 import { useEffect, useRef } from "react";
-import { personalSummary } from "../data/aboutMe";
+import { devLinks } from "../data/aboutMe";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaRegFile } from "react-icons/fa6";
 
 
 
@@ -43,111 +46,211 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, sect
                 zIndex: 1000,
                 width: sideBarOpen ? "400px" : "60px",
                 height: "100vh",
-                background: "#111827",
                 color: "#e5e7eb",
-                padding: sideBarOpen ? "20px" : "20px 0px 0px 0px",
                 position: "fixed",
                 left: 0,
                 top: 0,
-                background: "linear-gradient(180deg, #21407c 40%, #8ba0cf 100%)",
                 overflow: "hidden",
-                transition: "width 0.4s ease, clip-path 0.4s ease",
-                clipPath: sideBarOpen
-                    ? "polygon(0 0, 100% 0, 60% 100%, 0 100%)"
-                    : "polygon(0 0, 100% 0, 65% 100%, 0 100%)",
+                transition: "width 0.4s ease",
             }}
         >
-            <div
+            <svg
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
                 style={{
-                    display: "flex",
-                    justifyContent: sideBarOpen ? "space-between" : "center",
-                    alignItems: "center",
-                    height: "60px",
+                    position: "absolute",
+                    inset: 0,
+                    width: "100%",
+                    height: "100%",
+                    pointerEvents: "none",
                 }}
             >
+                <defs>
+                    <linearGradient id="sidebarGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="rgba(64, 102, 178, 0.96)" />
+                        <stop offset="100%" stopColor="rgba(15, 27, 56, 0.96)" />
+                    </linearGradient>
+                </defs>
 
-                {sideBarOpen && <h2 style={{
-                    margin: 0,
-                    opacity: sideBarOpen ? 1 : 0,
-                    pointerEvents: sideBarOpen ? "auto" : "none",
-                    whiteSpace: "nowrap",
-                }}>Aubrie Woodbine</h2>}
+                <polygon
+                    points={sideBarOpen ? "0,0 100,0 60,100 0,100" : "0,0 100,0 65,100 0,100"}
+                    fill="url(#sidebarGradient)"
+                    stroke="rgba(255,255,255,0.14)"
+                    strokeWidth="0.6"
+                />
+            </svg>
 
+            <div
+                style={{
+                    position: "relative",
+                    zIndex: 1,
+                    height: "100%",
+                    padding: sideBarOpen ? "20px" : "20px 0 0 0",
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            >
                 <div
                     style={{
-                        cursor: "pointer",
                         display: "flex",
+                        justifyContent: sideBarOpen ? "space-between" : "center",
                         alignItems: "center",
-                        justifyContent: "center",
-                        width: "40px",
-                        height: "40px",
+                        height: "60px",
                     }}
-                    onClick={() => setSideBarOpen(prev => !prev)}
                 >
-                    {sideBarOpen ? (
-                        <RiArrowLeftDoubleFill />
-                    ) : (
-                        <RiArrowRightDoubleFill />
+                    {sideBarOpen && (
+                        <h2
+                            style={{
+                                margin: 0,
+                                whiteSpace: "nowrap",
+                                color: "rgba(255,255,255,0.9)",
+                                fontWeight: 600,
+                            }}
+                        >
+                            Aubrie Woodbine
+                        </h2>
                     )}
-                </div>
-            </div>
 
-            {sideBarOpen &&
-                (<div style={{
-                    opacity: sideBarOpen ? 1 : 0,
-                    pointerEvents: sideBarOpen ? "auto" : "none",
-                }}>
-                    {/* <div
+                    <div
                         style={{
-                            width: "60%",
-                            aspectRatio: "1 / 1",
-                            borderRadius: "50%",
-                            position: "relative",
+                            cursor: "pointer",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            background: "linear-gradient(135deg, #ffffff8f, #ffffff05)",
-                            boxShadow: `
-                                0px 8px 40px rgba(0,0,0,0.35),
-                                inset 0px 12px 6px rgba(255,255,255,0.15),
-                                inset 0 -5px 8px rgba(0,0,0,0.25)
-                                `,
-                            overflow: "hidden",
+                            width: "40px",
+                            height: "40px",
+                            color: "rgba(255, 255, 255, 0.9)",
                         }}
+                        onClick={() => setSideBarOpen((prev) => !prev)}
                     >
-                        <img
-                            src="/images/profile.png"
-                            alt="Profile Picture"
-                            style={{
-                                width: "85%",
-                                height: "85%",
-                                borderRadius: "50%",
-                                objectFit: "cover",
-                            }}
-                        />
-                    </div> */}
+                        {sideBarOpen ? <RiArrowLeftDoubleFill className="icon-button" /> : <RiArrowRightDoubleFill className="icon-button" />}
+
+                    </div>
+                </div>
+
+                {!sideBarOpen && (
                     <div
                         style={{
-                            width: "100%",
-                            minWidth: "220px",
-                            maxWidth: "280px",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "60px",
+                            marginTop: "40px",
+                        }}
+                    >
+                        {devLinks.map((dev) => {
+                                const Icon = dev.icon;
+
+                                return (
+                                    <Icon
+                                        key={dev.name}
+                                        className="icon-button"
+                                        onClick={() =>
+                                            window.open(dev.url, "_blank", "noopener,noreferrer")
+                                        }
+                                    />
+                                );
+                            })}
+                    </div>
+                )}
+
+                {sideBarOpen && (
+                    <div
+                        style={{
                             opacity: 1,
                             pointerEvents: "auto",
                         }}
                     >
-                        <h3>Web Developer</h3>
-                        {/* <p style={{ fontSize: "0.9em", color: "#cbd5e1", whiteSpace: "normal", paddingRight: "30px" }}>{personalSummary}</p> */}
-                        <p style={{ border: '1px solid #e5e7eb', width: "80%" }}></p>
-                        <nav>
-                            <ul style={{ listStyle: "none", padding: 0, lineHeight: "2em" }}>
-                                {appSections.map((section, index) => (
-                                    <li key={section} className="nav-link" onClick={() => scrollToSection(section.toLowerCase())}>{section}</li>
-                                ))}
-                            </ul>
-                        </nav>
+                        <div
+                            style={{
+                                width: "100%",
+                                minWidth: "220px",
+                                maxWidth: "280px",
+                            }}
+                        >
+                            <h3
+                                style={{
+                                    color: "rgba(255,255,255,0.72)",
+                                    fontSize: "1.2rem",
+                                    marginBottom: "12px",
+                                }}
+                            >
+                                Web Developer
+                            </h3>
+
+                            <div
+                                style={{
+                                    width: "80%",
+                                    height: "1px",
+                                    background: "rgba(255,255,255,0.18)",
+                                    marginBottom: "20px",
+                                }}
+                            />
+
+                            <nav>
+                                <ul
+                                    style={{
+                                        listStyle: "none",
+                                        padding: 0,
+                                        margin: 0,
+                                        lineHeight: "2.2em",
+                                    }}
+                                >
+                                    {appSections.map((section) => (
+                                        <li
+                                            key={section}
+                                            className="nav-link"
+                                            onClick={() => scrollToSection(section.toLowerCase())}
+                                        >
+                                            {section}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                </div>
                 )}
+                {sideBarOpen &&
+                    <>
+                        <h3 style={{
+                            marginTop: "100px",
+                            color: "rgba(255,255,255,0.72)",
+                            fontSize: "1.2rem",
+                            marginBottom: "12px",
+                        }}>Dev Links</h3>
+                        <div
+                            style={{
+                                width: "60%",
+                                height: "1px",
+                                background: "rgba(255,255,255,0.18)",
+                                marginBottom: "20px",
+                            }}
+                        />
+                        <div
+                            style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                gap: "30px",
+                                marginLeft: "10px",
+                            }}
+                        >
+                            {devLinks.map((dev) => {
+                                const Icon = dev.icon;
+
+                                return (
+                                    <Icon
+                                        key={dev.name}
+                                        className="icon-button"
+                                        onClick={() =>
+                                            window.open(dev.url, "_blank", "noopener,noreferrer")
+                                        }
+                                    />
+                                );
+                            })}
+                        </div>
+                    </>}
+            </div>
         </aside>
     );
+    // );
 }

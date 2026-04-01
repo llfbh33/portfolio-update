@@ -11,38 +11,37 @@ export default function About({ scrollToSection }) {
             flexDirection: "row",
             maxWidth: "100%",
         }}>
-            <div style={{
-                position: "relative",
-                width: "35%",
-                height: "100%",
-                minHeight: "500px",
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: "20px",
-                boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
-                backdropFilter: "blur(4px)",
-                overflow: 'hidden'
-            }}>
-                <img
-                    src={aboutMeObject.image}
-                    alt="About Me"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                    }}
-                />
-                <div style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "linear-gradient(to bottom right, rgba(0,0,0,0.15), rgba(0,0,0,0.4))",
-                    pointerEvents: "none",
-                }} />
-            </div>
+<div style={{
+    position: "relative",
+    width: "35%",
+    aspectRatio: "3 / 4",
+    background: "rgba(255,255,255,0.06)",
+    border: "1px solid rgba(255,255,255,0.12)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "20px",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
+    backdropFilter: "blur(4px)",
+    overflow: "hidden",
+}}>
+    <img
+        src={aboutMeObject.image}
+        alt="About Me"
+        style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+        }}
+    />
+    <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(to bottom right, rgba(0,0,0,0.15), rgba(0,0,0,0.4))",
+        pointerEvents: "none",
+    }} />
+</div>
             <div
                 style={{
                     display: "flex",

@@ -139,16 +139,15 @@ export default function Hero({ appSections, scrollToSection }) {
 
                 }}>
                     {sections.map((section) => (
-                        <>
+                        <div key={section}>
                             {section !== 'Contact' && <p
                                 className="button-style"
                                 onClick={() => scrollToSection(section.toLowerCase())}
                                 // style={buttonStyle}
-                                key={section}
                             >
                                 {section}
                             </p>}
-                        </>
+                        </div>
                     ))}
                 </div>
 
