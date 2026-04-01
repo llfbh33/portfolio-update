@@ -81,6 +81,7 @@ export default function Home() {
           <div
             style={{
               overflowY: "scroll",
+              overflowY: "auto",
               padding: isWide ? "0px 0px 0px 40px" : "0px",
               height: "100vh",
               width: "100%",

@@ -35,56 +35,54 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, isWi
         setSideBarOpen(false);
     };
 
-if (!isWide) {
-    return (
-        <div
-  className="mobile-top-bar"
-  style={{
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    width: "100%",
-    height: "50px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: "0 16px",
-    background: "linear-gradient(180deg, rgba(40,70,120,0.96) 0%, rgba(15,27,56,0.96) 100%)",
-    backdropFilter: "blur(6px)",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
-    boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
-    zIndex: 1100,
-  }}
->
+    if (!isWide) {
+        return (
+            <div
+                className="mobile-top-bar"
+                style={{
+                    position: "fixed",
+                    bottom: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "50px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "0 16px",
+                    background: "linear-gradient(180deg, rgba(40,70,120,0.96) 0%, rgba(15,27,56,0.96) 100%)",
+                    backdropFilter: "blur(6px)",
+                    borderTop: "1px solid rgba(255,255,255,0.08)",
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
+                    zIndex: 1100,
+                }}
+            >
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "center",
+                        width: "100vw",
+                        gap: "26px",
+                        color: "rgba(255,255,255,0.78)",
+                    }}
+                >
+                    {devLinks.map((dev) => {
+                        const Icon = dev.icon;
 
-
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "flex-end",
-      alignItems: "center",
-      width: "100vw",
-      gap: "26px",
-      color: "rgba(255,255,255,0.78)",
-    }}
-  >
-    {devLinks.map((dev) => {
-      const Icon = dev.icon;
-
-      return (
-        <Icon
-          key={dev.name}
-          className="icon-button"
-          onClick={() =>
-            window.open(dev.url, "_blank", "noopener,noreferrer")
-          }
-        />
-      );
-    })}
-  </div>
-</div>
-    );
-}
+                        return (
+                            <Icon
+                                key={dev.name}
+                                className="icon-button"
+                                onClick={() =>
+                                    window.open(dev.url, "_blank", "noopener,noreferrer")
+                                }
+                            />
+                        );
+                    })}
+                </div>
+            </div>
+        );
+    }
 
 
     return (
@@ -188,18 +186,18 @@ if (!isWide) {
                         }}
                     >
                         {devLinks.map((dev) => {
-                                const Icon = dev.icon;
+                            const Icon = dev.icon;
 
-                                return (
-                                    <Icon
-                                        key={dev.name}
-                                        className="icon-button"
-                                        onClick={() =>
-                                            window.open(dev.url, "_blank", "noopener,noreferrer")
-                                        }
-                                    />
-                                );
-                            })}
+                            return (
+                                <Icon
+                                    key={dev.name}
+                                    className="icon-button"
+                                    onClick={() =>
+                                        window.open(dev.url, "_blank", "noopener,noreferrer")
+                                    }
+                                />
+                            );
+                        })}
                     </div>
                 )}
 
