@@ -1,5 +1,5 @@
 // /components/About.js
-import { aboutMeString } from "../data/aboutMe";
+import { aboutMeObject } from "../data/aboutMe";
 
 export default function About({ scrollToSection }) {
 
@@ -12,6 +12,7 @@ export default function About({ scrollToSection }) {
             maxWidth: "100%",
         }}>
             <div style={{
+                position: "relative",
                 width: "35%",
                 height: "100%",
                 minHeight: "500px",
@@ -23,8 +24,24 @@ export default function About({ scrollToSection }) {
                 borderRadius: "20px",
                 boxShadow: "0 8px 24px rgba(0,0,0,0.15)",
                 backdropFilter: "blur(4px)",
+                overflow: 'hidden'
             }}>
-                Image Placeholder
+                <img
+                    src={aboutMeObject.image}
+                    alt="About Me"
+                    style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                    }}
+                />
+                <div style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to bottom right, rgba(0,0,0,0.15), rgba(0,0,0,0.4))",
+                    pointerEvents: "none",
+                }} />
             </div>
             <div
                 style={{
@@ -42,7 +59,7 @@ export default function About({ scrollToSection }) {
                         color: "rgba(255,255,255,0.8)",
                     }}
                 >
-                    {aboutMeString}
+                    {aboutMeObject.summary}
                 </p>
 
                 <div
@@ -76,15 +93,5 @@ export default function About({ scrollToSection }) {
             </div>
         </div>
     );
+    ;
 }
-
-const buttonStyle = {
-    padding: "10px 18px",
-    borderRadius: "999px",
-    background: "rgba(255,255,255,0.08)",
-    border: "1px solid rgba(255,255,255,0.2)",
-    color: "white",
-    textDecoration: "none",
-    cursor: "pointer",
-    transition: "all 0.2s ease",
-};
