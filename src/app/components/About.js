@@ -5,10 +5,6 @@ export default function About({ scrollToSection }) {
 
     return (
         <div className="about-section">
-
-
-
-
                 <div
                     style={{
                         position: "relative",
@@ -37,15 +33,6 @@ export default function About({ scrollToSection }) {
                             display: "block",
                         }}
                     />
-                    {/* <div
-                    style={{
-                        position: "absolute",
-                        inset: 0,
-                        background:
-                            "linear-gradient(to bottom right, rgba(0,0,0,0.15), rgba(0,0,0,0.4))",
-                        pointerEvents: "none",
-                    }}
-                /> */}
                 </div>
 
             <div

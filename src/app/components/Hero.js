@@ -15,6 +15,7 @@ export default function Hero({ appSections, scrollToSection }) {
     ];
 
     return (
+        <>        
         <section
             id="hero"
             style={{
@@ -132,6 +133,7 @@ export default function Hero({ appSections, scrollToSection }) {
 
             </div>
         </section>
+        </>
     );
 }
 

@@ -12,6 +12,9 @@ export default function Section({ title, children, index }) {
     >
       {isHero || isContact ? <div className="hero-bg" /> : null}
 
+      {/* Tribute to author of stock images */}
+
+
       <div className="section-content">
         {!isHero && (
           <h2 style={{ marginBottom: "20px", fontSize: "2rem" }}>
@@ -21,6 +24,20 @@ export default function Section({ title, children, index }) {
 
         <div>{children}</div>
       </div>
+            {isHero && <div className="attributions">
+        <a
+          style={{
+            color: "rgba(255, 255, 255, 0.3)",
+            fontSize: "0.7rem",
+            
+          }}
+          href="https://www.vecteezy.com/free-photos/blue-particles"
+          target="_blank"
+          rel="noopener, noreferrer"
+          >
+            Blue Particles Stock photos by Vecteezy
+          </a>
+      </div>}
     </section>
   );
 }

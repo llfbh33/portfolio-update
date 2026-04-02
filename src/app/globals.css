@@ -206,6 +206,7 @@ body {
   .section-content {
     width: 100%;
   }
+
   .odd-styling,
   .even-styling,
   .hero-styling {
@@ -334,10 +335,10 @@ body {
   width: 100%;
   max-width: 420px;
   aspect-ratio: 3 / 4;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(4px);
   overflow: hidden;
 }
@@ -361,7 +362,7 @@ body {
 .about-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.15), rgba(0,0,0,0.4));
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.4));
   pointer-events: none;
 }
 
@@ -381,9 +382,21 @@ body {
 
 
 
+.attributions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(255, 255, 255, 0);
+  /* padding: 4px; */
+
+}
 
 
-/* Chrome, Edge, Safari */
+
+/* Chrome, Edge, Safari, Scroll Behavior */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -404,6 +417,5 @@ body {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.2) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
-
