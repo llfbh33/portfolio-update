@@ -136,7 +136,8 @@ body {
 }
 
 .feature-card:hover,
-.project-images-container:hover {
+.project-images-container:hover,
+.skill-card:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
@@ -289,10 +290,10 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-card:hover {
+/* .skill-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.386);
-}
+} */
 
 .skills-container {
   display: flex;
