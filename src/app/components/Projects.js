@@ -124,7 +124,7 @@ export default function Projects() {
                 className={card.error || card.url === null ? "button-deactivated" : "button-style"}
                 onClick={(e) => {
                   e.stopPropagation();
-                  if (card.error) return;
+                  if (card.error || card.url === null) return;
                   window.open(
                     `${card.url}`,
                     "_blank",
