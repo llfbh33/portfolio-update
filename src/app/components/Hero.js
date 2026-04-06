@@ -43,7 +43,7 @@ export default function Hero({ appSections, scrollToSection }) {
                         lineHeight: "1.2",
                         // textAlign: "left",
                         color: "white",
-                        borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
+                        // borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
                         paddingLeft: "10px"
                     }}>
                         {heroObject.intro}
@@ -75,7 +75,7 @@ export default function Hero({ appSections, scrollToSection }) {
                         lineHeight: "1.6",
                         textAlign: "right",
                         width: "100%",
-                        borderRight: "1px solid rgba(255, 255, 255, 0.305)",
+                        // borderRight: "1px solid rgba(255, 255, 255, 0.305)",
                         paddingRight: "10px"
                     }}>
                         {heroObject.introStatement}
@@ -95,7 +95,7 @@ export default function Hero({ appSections, scrollToSection }) {
                         opacity: 0.7,
                         textAlign: "left",
                         width: "100%",
-                        borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
+                        // borderLeft: "1px solid rgba(255, 255, 255, 0.305)",
                         paddingLeft: "10px"
                     }}>
                         {heroObject.workingOn}
