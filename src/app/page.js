@@ -72,8 +72,6 @@ export default function Home() {
       <main
         className="blu"
       >
-
-
         <div
           style={{
             display: "flex",
