@@ -15,7 +15,7 @@ export default function Experience() {
         {experienceObject.intro}
       </p> */}
       {experienceObject.jobs.map((job) => (
-        <div 
+        <div
           key={job.company}
           className="position-label"
         >
@@ -55,22 +55,23 @@ export default function Experience() {
                 marginTop: 0,
                 marginBottom: "12px",
                 fontSize: "1.1rem",
-                textDecorationLine: "underline"
+                letterSpacing: "0.04rem",
               }}
             >
               {card.title}
             </h3>
-
             <p
               style={{
                 marginTop: 0,
                 color: "rgba(255, 255, 255, 0.95)",
                 lineHeight: "1.5",
                 fontSize: "1rem",
+                // borderBottom: "1px solid grey",
               }}
             >
               {card.action}
             </p>
+
             <p
               style={{
                 marginTop: 0,
