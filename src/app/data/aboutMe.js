@@ -27,7 +27,7 @@ export const devLinks = [
   },
   {
     name: "resume",
-    url: "https://docs.google.com/document/d/1_Hw2HF0YgszRQC8y3ldnmuvPuu2QP7KcxMOs-kKIhA4/edit?usp=sharing",
+    url: "/Aubrie-Resume.pdf",
     icon: FaRegFile,
   },
 ];
