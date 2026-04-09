@@ -66,20 +66,20 @@ export default function Sidebar({ appSections, sideBarOpen, setSideBarOpen, isWi
                         color: "rgba(255,255,255,0.78)",
                     }}
                 >
-{devLinks.map((dev) => {
-  const Icon = dev.icon;
+                    {devLinks.map((dev) => {
+                        const Icon = dev.icon;
 
-  return (
-    <a
-      key={dev.name}
-      href={dev.url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon className="icon-button" />
-    </a>
-  );
-})}
+                        return (
+                            <a
+                                key={dev.name}
+                                href={dev.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Icon className="icon-button" />
+                            </a>
+                        );
+                    })}
                 </div>
             </div>
         );

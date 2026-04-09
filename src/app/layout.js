@@ -22,7 +22,7 @@ return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-8L7LL6GWJG"
+          src="https://www.googletagmanager.com/gtag/js?id=G-W6M1KFXZZB"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -30,7 +30,7 @@ return (
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-8L7LL6GWJG');
+            gtag('config', 'G-W6M1KFXZZB');
           `}
         </Script>
         {children}

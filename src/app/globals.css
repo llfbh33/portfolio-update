@@ -56,6 +56,10 @@ body {
   color: white;
 }
 
+.button-link {
+  height: 40px;
+}
+
 .button-deactivated {
   color: rgba(255, 255, 255, 0.381);
 }
@@ -259,6 +263,7 @@ body {
 
 .about-section-buttons {
   display: flex;
+  align-items: center;
   gap: 16px;
   margin-top: 10px;
 }

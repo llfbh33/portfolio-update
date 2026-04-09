@@ -1,7 +1,9 @@
 // /components/About.js
 import { aboutMeObject } from "../data/aboutMe";
+import { devLinks } from "../data/aboutMe";
 
 export default function About({ scrollToSection }) {
+    const resumeObj = devLinks.find(ele => ele.name === 'resume')
 
     return (
         <div className="about-section">
@@ -57,18 +59,15 @@ export default function About({ scrollToSection }) {
                 </p>
 
                 <div className="about-section-buttons">
-                    <p
-                        className="button-style"
-                        onClick={() =>
-                            window.open(
-                                "https://docs.google.com/document/d/1_Hw2HF0YgszRQC8y3ldnmuvPuu2QP7KcxMOs-kKIhA4/edit?usp=sharing",
-                                "_blank",
-                                "noopener,noreferrer"
-                            )
-                        }
-                    >
-                        Resume
-                    </p>
+                    <a
+                                className="button-style button-link"
+                                href={resumeObj.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Resume
+                            </a>
+
                     <p
                         className="button-style"
                         onClick={() => scrollToSection("contact")}
