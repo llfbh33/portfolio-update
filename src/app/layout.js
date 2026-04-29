@@ -13,9 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aubrie Woodbine",
-  description: "Aubrie Woodbine's Portfolio",
+  title: "Aubrie Woodbine | Frontend Developer",
+  description: "Frontend developer portfolio focused on React, Next.js, dashboards, data visualization, and no-code tools.",
 };
+
 
 export default function RootLayout({ children }) {
 return (
