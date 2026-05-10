@@ -61,6 +61,7 @@ export const projectsObject = {
         text: "TaskFlow is a full-stack productivity application that helps users organize tasks, schedules, resources, and daily reflections through an interactive calendar-based workflow system.",
         images: [
           "AppPreview-taskflow.png",
+          "taskflow-landing.png"
         ],
         url: "https://frontend-production-583c.up.railway.app/",
         gitUrl: "https://github.com/llfbh33/TaskFlow",
