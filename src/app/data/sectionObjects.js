@@ -57,27 +57,26 @@ export const projectsObject = {
   cards:
     [
       {
+        title: "TaskFlow",
+        text: "TaskFlow is a full-stack productivity application that helps users organize tasks, schedules, resources, and daily reflections through an interactive calendar-based workflow system.",
+        images: [
+          "AppPreview-taskflow.png",
+        ],
+        url: "https://frontend-production-583c.up.railway.app/",
+        gitUrl: "https://github.com/llfbh33/TaskFlow",
+        error: "",
+      },
+      {
         title: "Pen Crafted",
         text: "A content-heavy application combining structured writing tools, rich text editing, and a social feedback system into a clean, intuitive user experience.",
         images: [
           "penCrafted-3.png",
           "penCrafted-4.png"
         ],
-        url: "https://capstone-project-lm4v.onrender.com/",
+        url: "https://capstone-project-production-52dc.up.railway.app/",
         gitUrl: "https://github.com/llfbh33/Capstone-Project",
         error: "",
       },
-      {
-        title: "Fair Share",
-        text: "A collaborative expense-sharing application where I contributed reusable UI components, focusing on clean structure and consistent user interactions.",
-        images: [
-          "fairShare-1.png",
-          "fairShare-2.png",
-        ],
-        url: "https://fairshare-f8a7.onrender.com/",
-        gitUrl: "https://github.com/OrangeTabia/fairshare",
-        error: "Demo currently limited (backend offline)",
-      }, 
       {
         title: "Portfolio",
         text: "A portfolio designed as a UI system, built around reusable components, consistent layout patterns, and interactions that keep complex structures simple and intuitive.",
@@ -103,7 +102,7 @@ export const skillsObject = {
     },
     {
       heading: "Backend",
-      items: ["Python", "Flask", "SQL", "REST APIs",  "SQLAlchemy", "PostgreSQL"]
+      items: ["Python", "Flask", "SQL", "REST APIs", "SQLAlchemy", "PostgreSQL"]
     },
     {
       heading: "Tools",
@@ -113,8 +112,8 @@ export const skillsObject = {
 };
 
 export const currentlyLearning = {
-      heading: "Currently Learning",
-      items: ["TypeScript", "Modern frontend patterns"]
+  heading: "Currently Learning",
+  items: ["TypeScript", "Modern frontend patterns"]
 }
 
 
