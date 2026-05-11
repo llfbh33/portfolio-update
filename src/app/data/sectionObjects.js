@@ -63,6 +63,7 @@ export const projectsObject = {
           "AppPreview-taskflow.png",
           "taskflow-landing.png"
         ],
+        tools: "Next.js, React, Redux, Express.js, PostgreSQL, JavaScript",
         url: "https://frontend-production-583c.up.railway.app/",
         gitUrl: "https://github.com/llfbh33/TaskFlow",
         error: "",
@@ -74,6 +75,7 @@ export const projectsObject = {
           "penCrafted-3.png",
           "penCrafted-4.png"
         ],
+        tools: "React, Redux, Flask, PostgreSQL, Docker, JavaScript, Python",
         url: "https://capstone-project-production-52dc.up.railway.app/",
         gitUrl: "https://github.com/llfbh33/Capstone-Project",
         error: "",
@@ -85,6 +87,7 @@ export const projectsObject = {
           "portfolio-1.png",
           "portfolio-2.png",
         ],
+        tools: "Next.js, React, JavaScript",
         url: null,
         gitUrl: "https://github.com/llfbh33/portfolio-update",
         error: "",

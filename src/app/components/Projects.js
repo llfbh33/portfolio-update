@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Projects() {
-  let [hoveredImage, setHoveredImage] = useState(new Array(projectsObject.cards.length - 1).fill('two') );
+  let [hoveredImage, setHoveredImage] = useState(new Array(projectsObject.cards.length - 1).fill('two'));
 
   const handleImageZIndex = (image, index) => {
     const updateImage = [...hoveredImage];
@@ -54,17 +54,6 @@ export default function Projects() {
             <div
               className="project-images-container"
             >
-              {/* <div
-                style={{
-                  position: "relative",
-                  width: "100%",
-                  height: "300px",
-                  borderRadius: "32px",
-                  border: "1px solid rgba(255,255,255,0.18)",
-                  background: "rgba(255,255,255,0.02)",
-                }}
-              > */}
-
               <div
                 className={hoveredImage[index] === 'one' ? "project-image-one image-focus" : "project-image-one"}
                 onMouseEnter={() => hoveredImage[index] !== 'one' ? handleImageZIndex('one', index) : ""}
@@ -72,12 +61,7 @@ export default function Projects() {
                 <img
                   src={card.images.length >= 1 ? `images/${card.images[0]}` : 'images/placeholder.jpg'}
                   alt={'Project Image'}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block"
-                  }}
+                  className="project-image-file"
                 />
               </div>
 
@@ -87,55 +71,77 @@ export default function Projects() {
               >
                 <img
                   src={card.images.length >= 2 ? `images/${card.images[1]}` : 'images/placeholder.jpg'}
-                  alt={'Project Image'}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block"
-                  }}
+                  alt={`Project ${card.title} Image`}
+                  className="project-image-file"
                 />
               </div>
             </div>
             <div style={{
               display: "flex",
               alignItems: "center",
-              gap: "10px",
+              justifyContent: "space-between",
+              gap: "26px",
             }}>
-              <p
-                className={card.error || card.url === null ? "button-deactivated" : "button-style"}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  if (card.error || card.url === null) return;
-                  window.open(
-                    `${card.url}`,
-                    "_blank",
-                    "noopener,noreferrer"
-                  )
-                }}
-              >
-                <IoMdEye style={{ fontSize: "1.2rem" }} />
-              </p>
-              <p
-                className="button-style"
-                onClick={() => 
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+              }}>
+                <p
+                  className={card.error || card.url === null ? "button-deactivated" : "button-style"}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (card.error || card.url === null) return;
+                    window.open(
+                      `${card.url}`,
+                      "_blank",
+                      "noopener,noreferrer"
+                    )
+                  }}
+                >
+                  <IoMdEye style={{ fontSize: "1.2rem" }} />
+                </p>
+                <p
+                  className="button-style"
+                  onClick={() =>
                     window.open(
                       `${card.gitUrl}`,
                       "_blank",
                       "noopener,noreferrer"
                     )
                   }
-              >
-                <FaGithub style={{ fontSize: "1.2rem" }} />
-              </p>
-              {card.error &&
-                <p style={{
-                  width: "100%",
-                  textAlign: "right",
-                }}>
-                  {card.error}
+                >
+                  <FaGithub style={{ fontSize: "1.2rem" }} />
                 </p>
-              }
+                {card.error &&
+                  <p style={{
+                    width: "100%",
+                    textAlign: "right",
+                  }}>
+                    {card.error}
+                  </p>
+                }
+              </div>
+              <div style={{
+                flex: 1,
+                display: "flex",
+                gap: "6px",
+              }}>
+                <p style={{
+                  margin: 0,
+                  color: "rgba(255,255,255,0.78)",
+                  lineHeight: "1.6",
+                  fontSize: "0.95rem",
+                  fontWeight: 600,
+                }}>Tools: </p>
+                <p style={{
+                  margin: 0,
+                  color: "rgba(255,255,255,0.78)",
+                  lineHeight: "1.6",
+                  fontSize: "0.95rem",
+                }}>{card.tools}</p>
+              </div>
+
             </div>
           </div>
           // </div>
