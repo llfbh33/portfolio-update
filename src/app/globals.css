@@ -104,6 +104,8 @@ body {
   width: 300px;
 }
 
+
+/*--------Project Images Container and Images------------*/
 .project-images-container {
   margin-top: 40px;
   min-height: 380px;
@@ -120,6 +122,79 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   /* cursor: grab; */
 }
+
+.project-image-one {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 52%;
+  height: 210px;
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.03);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  overflow: hidden;
+
+  transition:
+    width 1.2s ease,
+    height 1.2s ease,
+    transform 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+
+  transform: translateY(0px);
+}
+
+.project-image-two {
+    position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 58%;
+  height: 220px;
+
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.03);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  overflow: hidden;
+
+  transition:
+    width 1.2s ease,
+    height 1.2s ease,
+    transform 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+
+  transform: translateY(0px);
+}
+
+.project-image-one:hover,
+.project-image-two:hover {
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+
+  /* transform: translateY(-5px); */
+
+  background: rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 12px 30px rgba(0, 123, 255, 0.3);
+}
+
+.image-focus { 
+  z-index: 5;
+}
+/*---end---*/
 
 .feature-no-hover {
   background: rgba(255, 255, 255, 0.1);
@@ -140,7 +215,6 @@ body {
 }
 
 .feature-card:hover,
-.project-images-container:hover,
 .skill-card:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
@@ -166,7 +240,7 @@ body {
 
 /* set the position as fixed insted of the background attachment as fixed, this way the scroll effect still works in mobile */
 .hero-bg {
-  position: fixed;  
+  position: fixed;
   inset: 0;
   background-image:
     radial-gradient(circle at 50% 40%, rgba(72, 86, 107, 0.65) 0%, rgba(2, 6, 23, 0.9) 80%),

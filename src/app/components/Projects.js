@@ -1,8 +1,16 @@
 import { projectsObject } from "../data/sectionObjects";
 import { IoMdEye } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Projects() {
+  let [hoveredImage, setHoveredImage] = useState(new Array(projectsObject.cards.length - 1).fill('two') );
+
+  const handleImageZIndex = (image, index) => {
+    const updateImage = [...hoveredImage];
+    updateImage[index] = image;
+    setHoveredImage(updateImage);
+  }
 
   return (
     <div style={{ maxWidth: "2000px" }}>
@@ -18,7 +26,7 @@ export default function Projects() {
       </p>
 
       <div className="project-grid">
-        {projectsObject.cards.map((card) => (
+        {projectsObject.cards.map((card, index) => (
           <div
             className="feature-no-hover"
             key={card.title}
@@ -58,21 +66,8 @@ export default function Projects() {
               > */}
 
               <div
-                style={{
-                  position: "absolute",
-                  top: "18px",
-                  left: "18px",
-                  width: "52%",
-                  height: "210px",
-                  borderRadius: "32px",
-                  border: "1px solid rgba(255,255,255,0.85)",
-                  background: "rgba(255,255,255,0.03)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  overflow: 'hidden'
-                }}
+                className={hoveredImage[index] === 'one' ? "project-image-one image-focus" : "project-image-one"}
+                onMouseEnter={() => hoveredImage[index] !== 'one' ? handleImageZIndex('one', index) : ""}
               >
                 <img
                   src={card.images.length >= 1 ? `images/${card.images[0]}` : 'images/placeholder.jpg'}
@@ -87,21 +82,8 @@ export default function Projects() {
               </div>
 
               <div
-                style={{
-                  position: "absolute",
-                  right: "18px",
-                  bottom: "18px",
-                  width: "58%",
-                  height: "220px",
-                  borderRadius: "32px",
-                  border: "1px solid rgba(255,255,255,0.85)",
-                  background: "rgba(255,255,255,0.03)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  overflow: "hidden",
-                }}
+                className={hoveredImage[index] === 'two' ? "project-image-two image-focus" : "project-image-two"}
+                onMouseEnter={() => hoveredImage[index] !== 'two' ? handleImageZIndex('two', index) : ""}
               >
                 <img
                   src={card.images.length >= 2 ? `images/${card.images[1]}` : 'images/placeholder.jpg'}
