@@ -76,12 +76,7 @@ export default function Projects() {
                 />
               </div>
             </div>
-            <div style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: "26px",
-            }}>
+            <div className="project-btns-tools">
               <div style={{
                 display: "flex",
                 alignItems: "center",
@@ -141,7 +136,6 @@ export default function Projects() {
                   fontSize: "0.95rem",
                 }}>{card.tools}</p>
               </div>
-
             </div>
           </div>
           // </div>
